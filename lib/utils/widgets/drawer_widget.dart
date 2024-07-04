@@ -24,12 +24,19 @@ class _DrawerWidgetState extends State<DrawerWidget> {
         ListTile(
           leading: const Icon(Icons.home),
           title: const Text('Inicio'),
-          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => const MyHomePage(),
+              ),
+            );
+          },
         ),
         ListTile(
           leading: const Icon(Icons.edit_document),
           title: const Text('Form'),
-          onTap: () {Navigator.pushNamed(context, AppRoutes.form);},
+          onTap: () {
+            Navigator.pushNamed(context, AppRoutes.form);
+          },
         ),
       ],
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_balcoder_firstapp/utils/widgets/drawer_widget.dart';
 
 class MainScaffold extends StatefulWidget {
   final Widget child;
@@ -33,7 +34,7 @@ class MainScaffoldState extends State<MainScaffold> {
                     Navigator.pop(context);
                   },
                   icon: const Icon(Icons.arrow_back))),
-      drawer: widget.showDrawer ? const Drawer() : null,
+      drawer: widget.showDrawer ? const Drawer(child: DrawerWidget()) : null,
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: widget.child,

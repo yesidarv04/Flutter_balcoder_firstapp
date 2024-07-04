@@ -16,35 +16,36 @@ class _MyHomePageState extends State<MyHomePage> {
       titlePage: 'Home',
       showDrawer: true,
       child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('Hola Mundo'),
-            Container(
-              height: 100,
-              padding: const EdgeInsets.all(12.0),
-              child: ListView(
-                children: [
-                  const ListTile(
-                    title: Text('Hola Mundo'),
-                  ),
-                  const ListTile(
-                    title: Text('Hola Mundo'),
-                  ),
-                  ListTile(
-                    title: const Text('Hola Mundo'),
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const UserPage(username: 'Yesid')));
-                    },
-                  ),
-                ], 
-              ),
-            )
-          ]),
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Hola Mundo'),
+          Container(
+            height: 200,
+            color: Colors.red,
+            padding: const EdgeInsets.all(12.0),
+            child: ListView(
+              children: [
+                const ListTile(
+                  title: Text('Hola Mundo'),
+                ),
+                const ListTile(
+                  title: Text('Hola Mundo'),
+                ),
+                ListTile(
+                  title: const Text('Hola Mundo'),
+                  onTap: () {
+                    Navigator.push( context, MaterialPageRoute(
+                        builder: (context) => const UserPage(username: 'Yesid'),
+                      ),
+                    );
+                  },
+                ),
+              ], 
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
