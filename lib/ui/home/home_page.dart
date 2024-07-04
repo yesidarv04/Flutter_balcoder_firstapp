@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   title: const Text('Hola Mundo'),
                   onTap: () {
                     Navigator.push( context, MaterialPageRoute(
-                        builder: (context) => const UserPage(username: 'Yesid'),
+                        builder: (context) => const UserPage(),
                       ),
                     );
                   },

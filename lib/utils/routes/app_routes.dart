@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_firstapp/ui/home/home_page.dart';
+import 'package:flutter_balcoder_firstapp/ui/user/user_page.dart';
 
 class AppRoutes {
   static const String home = '/';
@@ -10,7 +11,7 @@ class AppRoutes {
       case home:
         return MaterialPageRoute(builder: (context) => const MyHomePage());
       case form:
-        return MaterialPageRoute(builder: (context) => const MyHomePage());
+        return MaterialPageRoute(builder: (context) => const UserPage());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

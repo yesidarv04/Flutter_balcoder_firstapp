@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_firstapp/ui/home/home_page.dart';
+import 'package:flutter_balcoder_firstapp/ui/user/user_page.dart';
 import 'package:flutter_balcoder_firstapp/utils/routes/app_routes.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -27,6 +28,16 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           onTap: () {
             Navigator.push(context, MaterialPageRoute(
               builder: (context) => const MyHomePage(),
+              ),
+            );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.home),
+          title: const Text('Inicio'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => const UserPage(),
               ),
             );
           },
