@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_firstapp/ui/home/home_page.dart';
+import 'package:flutter_balcoder_firstapp/utils/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(),
+      initialRoute: AppRoutes.home,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
