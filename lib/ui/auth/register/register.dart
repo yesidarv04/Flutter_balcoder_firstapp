@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_balcoder_firstapp/ui/user/widgets/popup_widget.dart';
 import 'package:flutter_balcoder_firstapp/utils/mixins/text_form_validator_mixins.dart';
 import 'package:flutter_balcoder_firstapp/utils/theme/app_constants.dart';
+import 'package:flutter_balcoder_firstapp/utils/widgets/custom_text_form_field.dart';
 import 'package:flutter_balcoder_firstapp/utils/widgets/main_scaffold.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -65,22 +66,17 @@ class _RegisterPageState extends State<RegisterPage> with TextFieldValidator {
                   'Explora temas de bienestar mental y resevar sesiones de forma segura',
                   style: AppConstants.subtitleStyle,
                 ),
-
-                TextFormField(
-                    controller: _nameController,
+                CustomTextFormField(
+                    fieldController: _nameController,
                     keyboardType: TextInputType.name,
-                    decoration: const InputDecoration(
-                      labelText: 'Nombre',
-                      hintText: 'Escribe tu nombre',
-                    ),
+                    labelText: 'Nombre',
+                    hintText: 'Escribe tu nombre',
                     validator: validateRequired),
-                TextFormField(
-                    controller: _emailController,
+                CustomTextFormField(
+                    fieldController: _emailController,
                     keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(
-                      labelText: 'Email',
-                      hintText: 'Escribe tu email',
-                    ),
+                    labelText: 'Email',
+                    hintText: 'Escribe tu email',
                     validator: validateEmail),
                 TextFormField(
                     controller: _passwordController,
